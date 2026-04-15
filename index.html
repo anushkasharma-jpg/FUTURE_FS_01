@@ -1,342 +1,290 @@
-<!--
-    Project   : Dance Class & Choreography Enrollment System
-    Student   : Anushka Sharma
-    Reg No    : 2543165
-    Class     : II BCA - B
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Dance Class & Choreography Enrollment System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- IMPORTANT: CSS is in the SAME folder -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anushka Sharma | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<!-- Top Banner -->
-<div class="top-strip">
-    <p>Dance Class & Choreography Enrollment System • By Anushka Sharma (2543165) – II BCA-B 💃</p>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">A</span>
+      <div>
+        <p class="eyebrow">Personal Portfolio</p>
+        <h1>Anushka Sharma</h1>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-label="Open navigation" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Crafting digital experiences</p>
+        <h2>Hi, I'm Anushka</h2>
+        <p class="hero-subtitle">I build <span class="typed-text"></span><span class="cursor">|</span></p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-gradient"></div>
+        <div class="hero-info">
+          <p class="label open-to-work">Open to Work</p>
+          <h3>I create modern, responsive websites focused on clean design, smooth user experience, and efficient performance.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about reveal">
+      <div class="section-intro">
+        <p class="eyebrow">About Me</p>
+        <h2>Building elegant, scalable web experiences.</h2>
+        <div class="about-highlight">
+          <div class="about-highlight-inner">
+            <p><span class="about-icon">🚀</span>I am a motivated aspiring web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy building modern, responsive, and user-friendly web interfaces, combining creativity with problem-solving to create clean and efficient solutions.</p>
+            <p><span class="about-icon">🔧</span>I am continuously learning new technologies and exploring full stack development to understand how complete web applications are built. I also experiment with AI-assisted tools to enhance my development workflow and productivity.</p>
+            <p><span class="about-icon">📈</span>I am a quick learner with a growth mindset, always eager to take on new challenges and improve my skills. Currently, I am working as a Full Stack Web Development Intern at Future Interns, where I am gaining hands-on experience through real-world projects.</p>
+            <div class="about-pill-group">
+              <span>Full Stack Intern</span>
+              <span>AI-enhanced workflow</span>
+              <span>Growth mindset</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card soft-skills-card">
+          <h3>Soft Skills</h3>
+          <ul class="soft-skills-list">
+            <li>Team player</li>
+            <li>Adaptable</li>
+            <li>Problem solver</li>
+            <li>Fluent in English</li>
+            <li>Strong communication and collaboration</li>
+            <li>Choreographer</li>
+          </ul>
+        </div>
+        <div class="about-card education-card">
+          <h3>Education</h3>
+          <div class="education-timeline">
+            <div class="education-item">
+              <div class="education-date">2025 – 2028 (Expected)</div>
+              <div class="education-details">
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+                <p>Christ University, Bangalore</p>
+              </div>
+            </div>
+            <div class="education-item">
+              <div class="education-date">2023 – 2025</div>
+              <div class="education-details">
+                <h4>Pre-University Education</h4>
+                <p>Mount Carmel PU College, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills reveal">
+      <div class="section-intro">
+        <p class="eyebrow">Skills</p>
+        <h2>Technologies I work with</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-pill">
+          <h4>HTML5</h4>
+          <div class="skill-meter"><span style="width: 95%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>CSS3</h4>
+          <div class="skill-meter"><span style="width: 92%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>JavaScript</h4>
+          <div class="skill-meter"><span style="width: 88%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>Responsive Design</h4>
+          <div class="skill-meter"><span style="width: 100%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>Git</h4>
+          <div class="skill-meter"><span style="width: 90%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>UI Design</h4>
+          <div class="skill-meter"><span style="width: 86%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>C++</h4>
+          <div class="skill-meter"><span style="width: 75%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>Data Analytics</h4>
+          <div class="skill-meter"><span style="width: 80%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>Generative AI</h4>
+          <div class="skill-meter"><span style="width: 70%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>GitHub</h4>
+          <div class="skill-meter"><span style="width: 95%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>VS Code</h4>
+          <div class="skill-meter"><span style="width: 100%"></span></div>
+        </div>
+        <div class="skill-pill">
+          <h4>MySQL</h4>
+          <div class="skill-meter"><span style="width: 85%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section certificates reveal">
+      <div class="section-intro">
+        <p class="eyebrow">Certificates & Recognition</p>
+        <h2>Achievements & Credentials</h2>
+      </div>
+      <div class="certificates-grid">
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:01fc1ff2-8dc2-49ab-a466-9f35541d3dd2" target="_blank" rel="noopener noreferrer" class="certificate-card-link">
+          <div class="certificate-card">
+            <div class="certificate-icon">🎓</div>
+            <h3>HTML5 - The Language</h3>
+            <p>Infosys Springboard</p>
+            <span class="certificate-date">2026</span>
+          </div>
+        </a>
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:82a6453f-529d-402d-a180-21cee41053b0" target="_blank" rel="noopener noreferrer" class="certificate-card-link">
+          <div class="certificate-card">
+            <div class="certificate-icon">💻</div>
+            <h3>C Programming Course</h3>
+            <p>Infosys Springboard</p>
+            <span class="certificate-date">2025</span>
+          </div>
+        </a>
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:4aaca2a9-ab5d-40e9-8a51-cf5fe412137b" target="_blank" rel="noopener noreferrer" class="certificate-card-link">
+          <div class="certificate-card">
+            <div class="certificate-icon">⚡</div>
+            <h3>JavaScript</h3>
+            <p>Infosys Springboard</p>
+            <span class="certificate-date">2026</span>
+          </div>
+        </a>
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:ad23fa33-c121-4d58-93da-72d74b88403b" target="_blank" rel="noopener noreferrer" class="certificate-card-link">
+          <div class="certificate-card">
+            <div class="certificate-icon">🏅</div>
+            <h3>ARCathon</h3>
+            <p>Innovation Event</p>
+            <span class="certificate-date">2026</span>
+          </div>
+        </a>
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:9f1edeac-2927-467b-8a53-e1ca3a1d7a81" target="_blank" rel="noopener noreferrer" class="certificate-card-link">
+          <div class="certificate-card">
+            <div class="certificate-icon">🎉</div>
+            <h3>Fractal</h3>
+            <p>Intercollegiate Fest</p>
+            <span class="certificate-date">2026</span>
+          </div>
+        </a>
+        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:a7a8fa6b-033d-4da0-9922-f0d4db14961b" target="_blank" rel="noopener noreferrer" class="certificate-card-link">
+          <div class="certificate-card">
+            <div class="certificate-icon">💡</div>
+            <h3>YUGASTAR</h3>
+            <p>Hackathon Participant</p>
+            <span class="certificate-date">2026</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects reveal">
+      <div class="section-intro">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work</h2>
+      </div>
+      <div class="project-card">
+  <h3>Dance Enrollment Application</h3>
+  
+  <p>
+    A responsive web application designed to manage dance class registrations, 
+    allowing users to enroll, submit details, and interact with a clean UI.
+  </p>
+
+  <a href="https://anushkasharma-jpg.github.io/Dance-Enrollment-system/" target="_blank" class="project-btn">
+    View Project 🔗
+  </a>
+</div>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <div class="section-intro">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something great together.</h2>
+        <p>Send a message or reach out through email and I will get back to you soon.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p>Email</p>
+          <h3><a href="mailto:anushkaaaa.sharma.1903@gmail.com">anushkaaaa.sharma.1903@gmail.com</a></h3>
+        </div>
+        <div class="contact-card">
+          <p>Location</p>
+          <h3>Bangalore, Karnataka</h3>
+        </div>
+      </div>
+      <form action="https://formspree.io/f/maqaqoan" method="POST" class="contact-form">
+
+  <input type="hidden" name="_next" value="thankyou.html">
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Your name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+
+</form>
+       <div class="social-icons">
+    <a href="https://github.com/anushkasharma-jpg" target="_blank" class="icon github">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/anushka-sharma-a0659239a/" target="_blank" class="icon linkedin">
+        <i class="fab fa-linkedin"></i>
+    </a>
 </div>
 
-<!-- Navbar / Home Page Module -->
-<header class="navbar">
-    <div class="logo">
-        <span class="logo-main">Twirlz</span>
-        <span class="logo-sub">Dance & Choreography Studio</span>
-    </div>
-    <nav class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#styles">Styles</a>
-        <a href="#enroll">Enroll</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    </section>
 
-<!-- Hero / Home Page Module -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <p class="tagline">Dance • Learn • Perform</p>
-        <h1>Turn every <span>beat</span> into a story.</h1>
-        <p class="hero-text">
-            Choose your dance style, level, batch timing and choreography type in one simple flow.
-            This system helps students enroll for classes and request custom choreography for events.
-        </p>
-        <div class="hero-actions">
-            <a href="#enroll" class="btn primary">Start Enrollment</a>
-            <a href="#styles" class="btn secondary">View Dance Styles</a>
-        </div>
-        <div class="hero-stats">
-            <div>
-                <h3>20+</h3>
-                <p>Active Batches</p>
-            </div>
-            <div>
-                <h3>10+</h3>
-                <p>Dance Styles</p>
-            </div>
-            <div>
-                <h3>300+</h3>
-                <p>Happy Learners</p>
-            </div>
-        </div>
-    </div>
-    <div class="hero-image">
-        <div class="sticker-wrap">
-            <!-- Dancing sticker (put a GIF in images folder with this name) -->
-            
-        </div>
-        <div class="hero-card">
-            <p class="hero-card-title">Today’s Highlight</p>
-            <p class="hero-card-style">Bollywood x Hip-Hop Fusion</p>
-            <p class="hero-card-time">6:30 PM – 8:00 PM • Studio A</p>
-            <p class="hero-card-note">Perfect for college fest & cultural performances ✨</p>
-        </div>
-    </div>
-</section>
+  </main>
 
-<!-- About Academy Module -->
-<section id="about" class="section alt">
-    <h2 class="section-title">About the Academy</h2>
-    <div class="about-grid">
-        <div class="about-card">
-            <h3>What is this system?</h3>
-            <p>
-                The <strong>Dance Class & Choreography Enrollment System</strong> is a mini project that
-                allows students to register for dance classes, choose their preferred style and level,
-                select batch timing and also request choreography for events like weddings and college fests.
-            </p>
-        </div>
-        <div class="about-card">
-            <h3>Key Features / Modules</h3>
-            <ul>
-                <li>Home Page & About Module</li>
-                <li>Dance Styles Display Module</li>
-                <li>Student Registration Module</li>
-                <li>Dance Style, Level & Batch Selection Modules</li>
-                <li>Choreography Type Selection Module</li>
-                <li>Live Enrollment Preview & Fee Estimation Module</li>
-                <li>Gallery & Testimonials Module</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<!-- Dance Styles Module -->
-<section id="styles" class="section">
-    <h2 class="section-title">Dance Styles Offered</h2>
-    <div class="card-grid">
-        <div class="card style-card">
-            <span class="emoji">💃</span>
-            <h3>Bollywood</h3>
-            <p>Filmy, fun and energetic choreography suitable for stage shows and college events.</p>
-            <p class="meta">Levels: Beginner / Intermediate</p>
-        </div>
-        <div class="card style-card">
-            <span class="emoji">🕺</span>
-            <h3>Hip-Hop</h3>
-            <p>Grooves, isolations and freestyle for those who love swag and street styles.</p>
-            <p class="meta">Levels: Intermediate / Advanced</p>
-        </div>
-        <div class="card style-card">
-            <span class="emoji">🙏</span>
-            <h3>Classical / Semi-Classical</h3>
-            <p>Graceful movements blending classical techniques with modern elements.</p>
-            <p class="meta">Levels: All</p>
-        </div>
-        <div class="card style-card">
-            <span class="emoji">✨</span>
-            <h3>Contemporary</h3>
-            <p>Expressive storytelling using fluid body movement and floor work.</p>
-            <p class="meta">Levels: Beginner / Advanced</p>
-        </div>
-    </div>
-</section>
-
-<!-- Enrollment Section: Student Registration + Level / Batch / Choreo Modules -->
-<section id="enroll" class="section form-section">
-    <h2 class="section-title">Student Enrollment</h2>
-    <p class="section-subtitle">
-        Fill in your details and choose your preferences. The summary on the right will update live.
-    </p>
-
-    <div class="enroll-layout">
-        <!-- Student Registration Module -->
-        <form id="enrollmentForm" class="enroll-form">
-            <div class="form-grid">
-                <div class="form-card">
-                    <h3>Student Details</h3>
-
-                    <label>Full Name</label>
-                    <input type="text" id="studentName" required placeholder="e.g. Anushka Sharma">
-
-                    <label>Email</label>
-                    <input type="email" id="email" required placeholder="e.g. anushka@example.com">
-
-                    <label>Phone Number</label>
-                    <input type="tel" id="phone" required placeholder="e.g. 9876543210">
-
-                    <div class="inline-row">
-                        <div>
-                            <label>Age</label>
-                            <input type="number" id="age" min="5" max="70" required>
-                        </div>
-                        <div>
-                            <label>City</label>
-                            <input type="text" id="city" placeholder="e.g. Chennai">
-                        </div>
-                    </div>
-
-                    <label>College / School (optional)</label>
-                    <input type="text" id="institution" placeholder="e.g. II BCA-B, XYZ College">
-                </div>
-
-                <!-- Dance Style Selection, Level, Batch, Choreography Type Modules -->
-                <div class="form-card">
-                    <h3>Dance & Choreography Preferences</h3>
-
-                    <!-- Dance Style Selection Module -->
-                    <label>Dance Style</label>
-                    <select id="danceStyle" required>
-                        <option value="">-- Select Dance Style --</option>
-                        <option value="Bollywood">Bollywood</option>
-                        <option value="Hip-Hop">Hip-Hop</option>
-                        <option value="Classical">Classical</option>
-                        <option value="Semi-Classical">Semi-Classical</option>
-                        <option value="Contemporary">Contemporary</option>
-                        <option value="Freestyle">Freestyle</option>
-                    </select>
-
-                    <!-- Level Selection Module -->
-                    <label>Level</label>
-                    <select id="level" required>
-                        <option value="">-- Select Level --</option>
-                        <option value="Beginner">Beginner</option>
-                        <option value="Intermediate">Intermediate</option>
-                        <option value="Advanced">Advanced</option>
-                    </select>
-
-                    <!-- Batch Timing Module -->
-                    <label>Preferred Batch Timing</label>
-                    <select id="batchTiming" required>
-                        <option value="">-- Select Batch Timing --</option>
-                        <option value="Weekday Morning (7:00 AM - 8:00 AM)">Weekday Morning (7:00 AM - 8:00 AM)</option>
-                        <option value="Weekday Evening (6:30 PM - 8:00 PM)">Weekday Evening (6:30 PM - 8:00 PM)</option>
-                        <option value="Weekend Morning (8:00 AM - 9:30 AM)">Weekend Morning (8:00 AM - 9:30 AM)</option>
-                        <option value="Weekend Evening (5:30 PM - 7:00 PM)">Weekend Evening (5:30 PM - 7:00 PM)</option>
-                    </select>
-
-                    <!-- Choreography Type Module -->
-                    <label>Choreography Type (optional)</label>
-                    <select id="choreoType">
-                        <option value="None">Only Classes (No Choreo)</option>
-                        <option value="Solo">Solo Performance</option>
-                        <option value="Duet">Duet / Couple Dance</option>
-                        <option value="Group">Group Performance</option>
-                        <option value="Wedding Sangeet">Wedding Sangeet</option>
-                        <option value="College Fest">College Fest / Cultural</option>
-                        <option value="Competition">Competition Piece</option>
-                    </select>
-
-                    <label>Goals / Notes for Instructor</label>
-                    <textarea id="notes" rows="4"
-                              placeholder="Stage fear? Fest coming up? Bridal entry? Mention here."></textarea>
-
-                    <div class="toggle-row">
-                        <input type="checkbox" id="whatsappUpdates" value="Yes">
-                        <label for="whatsappUpdates">Send class updates on WhatsApp</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Enrollment Processing (front-end demo) -->
-            <div class="form-footer">
-                <button type="submit" class="btn primary big" id="submitBtn">
-                    Submit Enrollment
-                </button>
-                <p class="tiny-text">
-                    (Demo only – in a full system this data would be stored in a database through a backend module.)
-                </p>
-            </div>
-        </form>
-
-        <!-- Live Enrollment Preview + Fee Plan Module -->
-        <aside class="summary-card">
-            <h3>Enrollment Preview</h3>
-            <p class="summary-name" id="summaryName">Student: —</p>
-            <p id="summaryStyle">Style: —</p>
-            <p id="summaryLevel">Level: —</p>
-            <p id="summaryBatch">Batch: —</p>
-            <p id="summaryChoreo">Choreography: —</p>
-
-            <div class="summary-divider"></div>
-
-            <p id="summaryFee" class="summary-fee">Estimated Monthly Fee: —</p>
-            <p id="summaryChoreoFee" class="summary-fee">Approx. Choreo Add-on: —</p>
-            <p id="summaryTag" class="summary-tag">Pick your options to see your dance vibe ✨</p>
-
-            <p id="summaryNotes" class="summary-notes">
-                Notes will appear here as you type…
-            </p>
-
-            <div class="mini-sticker-wrap">
-               
-            </div>
-        </aside>
-    </div>
-</section>
-
-<!-- Testimonials Module -->
-<section class="section alt">
-    <h2 class="section-title">What Students Say</h2>
-    <div class="card-grid">
-        <div class="card">
-            <p class="quote">“The choreography for our college fest was so clean and well planned!”</p>
-            <p class="quote-name">– Fest Team, II BCA</p>
-        </div>
-        <div class="card">
-            <p class="quote">“Beginner batches are super friendly. No judgement, only growth.”</p>
-            <p class="quote-name">– First Year Student</p>
-        </div>
-        <div class="card">
-            <p class="quote">“The batch timing options helped me dance even with a tight schedule.”</p>
-            <p class="quote-name">– Working Student</p>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Module (with stickers) -->
-<section id="gallery" class="section">
-    <h2 class="section-title">Gallery & Stickers</h2>
-    <p class="section-subtitle">
-        You can add practice pictures, event photos or animated dance GIFs here for demonstration.
-    </p>
-    <div class="gallery-grid">
-        <div class="gallery-card">
-            
-            <p>Stage Rehearsal</p>
-        </div>
-        <div class="gallery-card">
-            
-            <p>College Fest Performance</p>
-        </div>
-        <div class="gallery-card">
-           
-            <p>Dancing Sticker</p>
-        </div>
-    </div>
-</section>
-
-<!-- Contact & Footer Module -->
-<section id="contact" class="section alt">
-    <h2 class="section-title">Contact & Project Details</h2>
-    <div class="about-grid">
-        <div class="about-card">
-            <h3>Project Owner</h3>
-            <p><strong>Name:</strong> Anushka Sharma</p>
-            <p><strong>Register Number:</strong> 2543165</p>
-            <p><strong>Class:</strong> II BCA - B</p>
-        </div>
-        <div class="about-card">
-            <h3>Contact (Demo)</h3>
-            <p><strong>Email:</strong> anushkasharma2103@gmail.com</p>
-            <p><strong>Phone:</strong> +91-95915 35940</p>
-            <p><strong>Location:</strong> Bangalore, Karnataka</p>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <p class="footer-bottom">
-        Dance Class & Choreography Enrollment System • Mini Project by Anushka Sharma (2543165), II BCA-B
-    </p>
-</footer>
-
-<!-- IMPORTANT: JS is also in the SAME folder -->
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
