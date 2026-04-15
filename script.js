@@ -1,105 +1,141 @@
-const typedPhrases = [
-  'responsive websites',
-  'interactive interfaces',
-  'clean UI systems',
-  'smooth user journeys'
-];
-const typedText = document.querySelector('.typed-text');
-const cursor = document.querySelector('.cursor');
-let phraseIndex = 0;
-let letterIndex = 0;
-let typingForward = true;
+// script.js – Live Preview + Fee Estimation
 
-function typePhrase() {
-  const currentPhrase = typedPhrases[phraseIndex];
-  if (typingForward) {
-    typedText.textContent = currentPhrase.slice(0, letterIndex + 1);
-    letterIndex += 1;
-    if (letterIndex === currentPhrase.length) {
-      typingForward = false;
-      setTimeout(typePhrase, 1200);
-      return;
+const nameInput = document.getElementById("studentName");
+const styleSelect = document.getElementById("danceStyle");
+const levelSelect = document.getElementById("level");
+const batchSelect = document.getElementById("batchTiming");
+const choreoSelect = document.getElementById("choreoType");
+const notesArea = document.getElementById("notes");
+
+// Summary elements
+const summaryName = document.getElementById("summaryName");
+const summaryStyle = document.getElementById("summaryStyle");
+const summaryLevel = document.getElementById("summaryLevel");
+const summaryBatch = document.getElementById("summaryBatch");
+const summaryChoreo = document.getElementById("summaryChoreo");
+const summaryFee = document.getElementById("summaryFee");
+const summaryChoreoFee = document.getElementById("summaryChoreoFee");
+const summaryTag = document.getElementById("summaryTag");
+const summaryNotes = document.getElementById("summaryNotes");
+
+// Fee calculation logic
+function calculateFee(style, level, choreo) {
+    if (!style || !level) return null;
+
+    let base = 1200; // Base monthly fee
+
+    // Style-based adjustments
+    switch (style) {
+        case "Bollywood": base += 200; break;
+        case "Hip-Hop": base += 300; break;
+        case "Classical": base += 250; break;
+        case "Semi-Classical": base += 280; break;
+        case "Contemporary": base += 350; break;
+        case "Freestyle": base += 150; break;
     }
-  } else {
-    typedText.textContent = currentPhrase.slice(0, letterIndex - 1);
-    letterIndex -= 1;
-    if (letterIndex === 0) {
-      typingForward = true;
-      phraseIndex = (phraseIndex + 1) % typedPhrases.length;
+
+    // Level-based adjustments
+    if (level === "Intermediate") base += 300;
+    if (level === "Advanced") base += 600;
+
+    // Choreo add-on (approx. one-time)
+    let choreoAdd = 0;
+    switch (choreo) {
+        case "Solo": choreoAdd = 800; break;
+        case "Duet": choreoAdd = 1200; break;
+        case "Group": choreoAdd = 1500; break;
+        case "Wedding Sangeet": choreoAdd = 2500; break;
+        case "College Fest": choreoAdd = 2000; break;
+        case "Competition": choreoAdd = 3000; break;
+        default: choreoAdd = 0; // None
     }
-  }
-  setTimeout(typePhrase, typingForward ? 90 : 45);
+
+    return { monthly: base, choreoAdd };
 }
 
-typePhrase();
+// Vibe tag
+function buildTag(style, level, choreo) {
+    if (!style && !level) return "Pick your options to see your dance vibe ✨";
 
-const navToggle = document.getElementById('nav-toggle');
-const navbar = document.getElementById('navbar');
-const navLinks = document.querySelectorAll('.nav-link');
+    let parts = [];
 
-navToggle.addEventListener('click', () => {
-  navbar.classList.toggle('open');
-  navToggle.classList.toggle('open');
-});
+    if (level === "Beginner") parts.push("Perfect start for building confidence.");
+    if (level === "Intermediate") parts.push("Great balance of technique and fun.");
+    if (level === "Advanced") parts.push("Performance-ready and stage focused.");
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    navbar.classList.remove('open');
-  });
-});
+    if (style === "Bollywood") parts.push("Full-on filmy energy.");
+    if (style === "Hip-Hop") parts.push("High swag and street style.");
+    if (style === "Classical" || style === "Semi-Classical") parts.push("Graceful expressions and strong basics.");
+    if (style === "Contemporary") parts.push("Storytelling through movement.");
+    if (style === "Freestyle") parts.push("Chill, experimental and free flow.");
 
-const revealElements = document.querySelectorAll('.reveal');
-const observerOptions = {
-  threshold: 0.15
-};
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-      revealObserver.unobserve(entry.target);
+    if (choreo && choreo !== "None") {
+        parts.push("Choreography tailored for " + choreo + ".");
     }
-  });
-}, observerOptions);
 
-revealElements.forEach((el) => revealObserver.observe(el));
-
-function updateActiveNav() {
-  const sections = document.querySelectorAll('main section[id]');
-  const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const link = document.querySelector(`.nav-link[href="#${section.id}"]`);
-
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-      navLinks.forEach((navLink) => navLink.classList.remove('active'));
-      if (link) link.classList.add('active');
-    }
-  });
+    return parts.join(" ");
 }
 
-window.addEventListener('scroll', updateActiveNav);
-updateActiveNav();
+// Update summary
+function updateSummary() {
+    const name = nameInput.value.trim();
+    const style = styleSelect.value;
+    const level = levelSelect.value;
+    const batch = batchSelect.value;
+    const choreo = choreoSelect.value;
+    const notes = notesArea.value.trim();
 
-const contactForm = document.getElementById('contact-form');
-const formMessage = document.getElementById('form-message');
+    summaryName.textContent = "Student: " + (name || "—");
+    summaryStyle.textContent = "Style: " + (style || "—");
+    summaryLevel.textContent = "Level: " + (level || "—");
+    summaryBatch.textContent = "Batch: " + (batch || "—");
+    summaryChoreo.textContent = "Choreography: " + (choreo || "—");
 
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const name = contactForm.name.value.trim();
-  const email = contactForm.email.value.trim();
-  const message = contactForm.message.value.trim();
+    const feeInfo = calculateFee(style, level, choreo);
+    if (feeInfo) {
+        summaryFee.textContent = "Estimated Monthly Fee: ₹" + feeInfo.monthly;
+        summaryChoreoFee.textContent =
+            feeInfo.choreoAdd > 0
+                ? "Approx. Choreo Add-on: ₹" + feeInfo.choreoAdd
+                : "Approx. Choreo Add-on: Not selected";
+    } else {
+        summaryFee.textContent = "Estimated Monthly Fee: —";
+        summaryChoreoFee.textContent = "Approx. Choreo Add-on: —";
+    }
 
-  if (!name || !email || !message) {
-    formMessage.textContent = 'Please fill in every field.';
-    return;
-  }
+    summaryTag.textContent = buildTag(style, level, choreo);
+    summaryNotes.textContent = notes
+        ? "Note: " + notes
+        : "Notes will appear here as you type…";
+}
 
-  formMessage.textContent = 'Thanks! Your message is on its way.';
-  contactForm.reset();
-  setTimeout(() => {
-    formMessage.textContent = '';
-  }, 4000);
+// Attach listeners
+[
+    nameInput,
+    styleSelect,
+    levelSelect,
+    batchSelect,
+    choreoSelect,
+    notesArea
+].forEach(el => {
+    if (el) el.addEventListener("input", updateSummary);
 });
+
+// Initial call
+updateSummary();
+
+// Simple front-end validation demo on submit
+const form = document.getElementById("enrollmentForm");
+if (form) {
+    form.addEventListener("submit", function (e) {
+        const phone = document.getElementById("phone").value.trim();
+        if (phone.length < 10) {
+            alert("Please enter a valid 10-digit phone number.");
+            e.preventDefault();
+            return;
+        }
+
+        alert("Enrollment submitted successfully! (Demo front-end submission only)");
+        e.preventDefault(); // remove this if you later connect backend
+    });
+}
